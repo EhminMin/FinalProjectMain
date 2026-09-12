@@ -1,4 +1,4 @@
-﻿namespace FinalProject.Models
+namespace FinalProject.Models
 {
     public class Table
     {
@@ -13,6 +13,10 @@
         public string Material { get; set; }
         public decimal Price { get; set; }
 
+        public Table()
+        {
+
+        }
 
     }
 }
