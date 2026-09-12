@@ -1,0 +1,30 @@
+Set: Скло Set
+ Table size: 90x90
+ Table material: Скло
+ Chairs count: 1
+ Total price: 3000,00
+
+Set: Дерево Set
+ Table size: 150x100
+ Table material: Дерево
+ Chairs count: 6
+ Total price: 6400,00
+
+Set: Метал Set
+ Table size: 100x100
+ Table material: Метал
+ Chairs count: 2
+ Total price: 3250,00
+
+Set: ДСП Set
+ Table size: 120x60
+ Table material: ДСП
+ Chairs count: 1
+ Total price: 1100,00
+
+Set: Пластик Set
+ Table size: 80x80
+ Table material: Пластик
+ Chairs count: 2
+ Total price: 950,00
+
