@@ -1,4 +1,4 @@
-﻿namespace FinalProject.Models
+namespace FinalProject.Models
 {
     public class Chair
     {
@@ -10,5 +10,10 @@
 
         public string Material { get; set; }
         public decimal Price { get; set; }
+
+        public Chair()
+        {
+
+        }
     }
 }
