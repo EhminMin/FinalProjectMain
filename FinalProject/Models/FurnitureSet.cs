@@ -1,4 +1,4 @@
-﻿namespace FinalProject.Models
+namespace FinalProject.Models
 {
     public class FurnitureSet
     {
@@ -25,6 +25,11 @@
                 }
                 return total;
             }
+        }
+
+        public FurnitureSet()
+        {
+
         }
     }
 }
