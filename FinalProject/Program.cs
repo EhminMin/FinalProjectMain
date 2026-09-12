@@ -1,4 +1,4 @@
-﻿using FinalProject.Models;
+using FinalProject.Models;
 using FinalProject.Services;
 
 namespace FinalProject
@@ -43,17 +43,12 @@ namespace FinalProject
                     jsonService.SerializeToFile(Path.Combine("..", "..", "..", "output", "set2Json.json"),
                         remainingSets);
 
-                    XmlSerializerService xmlService = new XmlSerializerService();
-                    xmlService.SerializeToFile(Path.Combine("..", "..", "..", "output", "set1Xml.xml"), firstSet);
-                    xmlService.SerializeToFile(Path.Combine("..", "..", "..", "output", "set2Xml.xml"), remainingSets);
-
-                }
-
-                catch (Exception ex)
-                {
-                    Logger.LogException(ex.Message);
-                    Console.WriteLine(ex.Message);
-                }
+               
+            }
+            catch (Exception ex)
+            {
+                Logger.LogException(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
     }
