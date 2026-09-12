@@ -1,0 +1,112 @@
+{
+  "Tables": [
+    {
+      "Size": "120x80",
+      "Material": "Дерево",
+      "Price": 1500.00
+    },
+    {
+      "Size": "90x90",
+      "Material": "Скло",
+      "Price": 2200.00
+    },
+    {
+      "Size": "150x100",
+      "Material": "Дерево",
+      "Price": 3000.00
+    },
+    {
+      "Size": "100x100",
+      "Material": "Метал",
+      "Price": 1800.00
+    },
+    {
+      "Size": "120x60",
+      "Material": "ДСП",
+      "Price": 800.00
+    },
+    {
+      "Size": "80x80",
+      "Material": "Пластик",
+      "Price": 500.00
+    },
+    {
+      "Size": "200x100",
+      "Material": "Дерево",
+      "Price": 5000.00
+    },
+    {
+      "Size": "110x70",
+      "Material": "Скло",
+      "Price": 2500.00
+    },
+    {
+      "Size": "140x80",
+      "Material": "Метал",
+      "Price": 2100.00
+    },
+    {
+      "Size": "90x60",
+      "Material": "ДСП",
+      "Price": 750.00
+    }
+  ],
+  "Chairs": [
+    {
+      "Material": "Дерево",
+      "Price": 450.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 500.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 400.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 600.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 600.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 600.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 600.00
+    },
+    {
+      "Material": "Дерево",
+      "Price": 600.00
+    },
+    {
+      "Material": "Скло",
+      "Price": 800.00
+    },
+    {
+      "Material": "Метал",
+      "Price": 700.00
+    },
+    {
+      "Material": "Метал",
+      "Price": 750.00
+    },
+    {
+      "Material": "Пластик",
+      "Price": 200.00
+    },
+    {
+      "Material": "Пластик",
+      "Price": 250.00
+    },
+    {
+      "Material": "ДСП",
+      "Price": 300.00
+    }
+  ]
+}

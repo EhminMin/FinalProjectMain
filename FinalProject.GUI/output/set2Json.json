@@ -1,0 +1,110 @@
+[
+  {
+    "Name": "Скло Set",
+    "Table": {
+      "Size": "90x90",
+      "Material": "Скло",
+      "Price": 2200.00
+    },
+    "Chairs": [
+      {
+        "Material": "Скло",
+        "Price": 800.00
+      }
+    ],
+    "ChairsCount": 1,
+    "TotalPrice": 3000.00
+  },
+  {
+    "Name": "Дерево Set",
+    "Table": {
+      "Size": "150x100",
+      "Material": "Дерево",
+      "Price": 3000.00
+    },
+    "Chairs": [
+      {
+        "Material": "Дерево",
+        "Price": 400.00
+      },
+      {
+        "Material": "Дерево",
+        "Price": 600.00
+      },
+      {
+        "Material": "Дерево",
+        "Price": 600.00
+      },
+      {
+        "Material": "Дерево",
+        "Price": 600.00
+      },
+      {
+        "Material": "Дерево",
+        "Price": 600.00
+      },
+      {
+        "Material": "Дерево",
+        "Price": 600.00
+      }
+    ],
+    "ChairsCount": 6,
+    "TotalPrice": 6400.00
+  },
+  {
+    "Name": "Метал Set",
+    "Table": {
+      "Size": "100x100",
+      "Material": "Метал",
+      "Price": 1800.00
+    },
+    "Chairs": [
+      {
+        "Material": "Метал",
+        "Price": 700.00
+      },
+      {
+        "Material": "Метал",
+        "Price": 750.00
+      }
+    ],
+    "ChairsCount": 2,
+    "TotalPrice": 3250.00
+  },
+  {
+    "Name": "ДСП Set",
+    "Table": {
+      "Size": "120x60",
+      "Material": "ДСП",
+      "Price": 800.00
+    },
+    "Chairs": [
+      {
+        "Material": "ДСП",
+        "Price": 300.00
+      }
+    ],
+    "ChairsCount": 1,
+    "TotalPrice": 1100.00
+  },
+  {
+    "Name": "Пластик Set",
+    "Table": {
+      "Size": "80x80",
+      "Material": "Пластик",
+      "Price": 500.00
+    },
+    "Chairs": [
+      {
+        "Material": "Пластик",
+        "Price": 200.00
+      },
+      {
+        "Material": "Пластик",
+        "Price": 250.00
+      }
+    ],
+    "ChairsCount": 2,
+    "TotalPrice": 950.00
+  }
+]
