@@ -26,5 +26,10 @@
                 return total;
             }
         }
+
+        public FurnitureSet()
+        {
+
+        }
     }
 }

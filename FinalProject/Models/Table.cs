@@ -13,6 +13,10 @@
         public string Material { get; set; }
         public decimal Price { get; set; }
 
+        public Table()
+        {
+
+        }
 
     }
 }
