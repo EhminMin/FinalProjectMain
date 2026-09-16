@@ -1,98 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfFurnitureSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FurnitureSet>
-    <Name>скло Set</Name>
-    <Items>
-      <Furniture xsi:type="Table">
-        <Material>скло</Material>
-        <Price>2200.00</Price>
-        <Width>90</Width>
-        <Depth>90</Depth>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>скло</Material>
-        <Price>800.00</Price>
-      </Furniture>
-    </Items>
+    <Name>дерево Set</Name>
   </FurnitureSet>
   <FurnitureSet>
-    <Name>дерево Set</Name>
-    <Items>
-      <Furniture xsi:type="Table">
-        <Material>дерево</Material>
-        <Price>3000.00</Price>
-        <Width>150</Width>
-        <Depth>100</Depth>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дерево</Material>
-        <Price>400.00</Price>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дерево</Material>
-        <Price>600.00</Price>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дерево</Material>
-        <Price>600.00</Price>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дерево</Material>
-        <Price>600.00</Price>
-      </Furniture>
-    </Items>
+    <Name>скло Set</Name>
   </FurnitureSet>
   <FurnitureSet>
     <Name>метал Set</Name>
-    <Items>
-      <Furniture xsi:type="Table">
-        <Material>метал</Material>
-        <Price>1800.00</Price>
-        <Width>100</Width>
-        <Depth>100</Depth>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>метал</Material>
-        <Price>700.00</Price>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>метал</Material>
-        <Price>750.00</Price>
-      </Furniture>
-    </Items>
   </FurnitureSet>
   <FurnitureSet>
     <Name>дсп Set</Name>
-    <Items>
-      <Furniture xsi:type="Table">
-        <Material>дсп</Material>
-        <Price>800.00</Price>
-        <Width>120</Width>
-        <Depth>60</Depth>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дсп</Material>
-        <Price>300.00</Price>
-      </Furniture>
-    </Items>
   </FurnitureSet>
   <FurnitureSet>
     <Name>пластик Set</Name>
-    <Items>
-      <Furniture xsi:type="Table">
-        <Material>пластик</Material>
-        <Price>500.00</Price>
-        <Width>80</Width>
-        <Depth>80</Depth>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>пластик</Material>
-        <Price>200.00</Price>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>пластик</Material>
-        <Price>250.00</Price>
-      </Furniture>
-    </Items>
   </FurnitureSet>
 </ArrayOfFurnitureSet>

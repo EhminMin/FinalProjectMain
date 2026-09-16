@@ -1,121 +1,26 @@
 [
   {
+    "Name": "дерево Set",
+    "ChairsCount": 6,
+    "TotalPrice": 4650.00
+  },
+  {
     "Name": "скло Set",
-    "Items": [
-      {
-        "$type": "table",
-        "Width": 90,
-        "Depth": 90,
-        "Material": "скло",
-        "Price": 2200.00
-      },
-      {
-        "$type": "chair",
-        "Material": "скло",
-        "Price": 800.00
-      }
-    ],
     "ChairsCount": 1,
     "TotalPrice": 3000.00
   },
   {
-    "Name": "дерево Set",
-    "Items": [
-      {
-        "$type": "table",
-        "Width": 150,
-        "Depth": 100,
-        "Material": "дерево",
-        "Price": 3000.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дерево",
-        "Price": 400.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дерево",
-        "Price": 600.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дерево",
-        "Price": 600.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дерево",
-        "Price": 600.00
-      }
-    ],
-    "ChairsCount": 4,
-    "TotalPrice": 5200.00
-  },
-  {
     "Name": "метал Set",
-    "Items": [
-      {
-        "$type": "table",
-        "Width": 100,
-        "Depth": 100,
-        "Material": "метал",
-        "Price": 1800.00
-      },
-      {
-        "$type": "chair",
-        "Material": "метал",
-        "Price": 700.00
-      },
-      {
-        "$type": "chair",
-        "Material": "метал",
-        "Price": 750.00
-      }
-    ],
     "ChairsCount": 2,
     "TotalPrice": 3250.00
   },
   {
     "Name": "дсп Set",
-    "Items": [
-      {
-        "$type": "table",
-        "Width": 120,
-        "Depth": 60,
-        "Material": "дсп",
-        "Price": 800.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дсп",
-        "Price": 300.00
-      }
-    ],
     "ChairsCount": 1,
     "TotalPrice": 1100.00
   },
   {
     "Name": "пластик Set",
-    "Items": [
-      {
-        "$type": "table",
-        "Width": 80,
-        "Depth": 80,
-        "Material": "пластик",
-        "Price": 500.00
-      },
-      {
-        "$type": "chair",
-        "Material": "пластик",
-        "Price": 200.00
-      },
-      {
-        "$type": "chair",
-        "Material": "пластик",
-        "Price": 250.00
-      }
-    ],
     "ChairsCount": 2,
     "TotalPrice": 950.00
   }

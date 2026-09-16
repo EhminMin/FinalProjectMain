@@ -1,14 +1,18 @@
 using FinalProject.GUI.Interfaces;
 using FinalProject.GUI.Services;
 using FinalProject.GUI.Models;
-using FurnitureSet = FinalProject.GUI.Models.FurnitureSet;
 
 namespace FinalProject.GUI
 {
     public partial class MainForm : Form
     {
-        private List<Chair> _availableChairs = new();
-        private List<Table> _availableTables = new();
+        public class InventoryData
+        {
+            public List<Table> Tables { get; set; } = new();
+            public List<Chair> Chairs { get; set; } = new();
+        }
+
+        private InventoryData _inventory = new InventoryData();
 
         public MainForm()
         {
@@ -24,8 +28,7 @@ namespace FinalProject.GUI
 
                 if (data != null)
                 {
-                    _availableTables.AddRange(data.Tables);
-                    _availableChairs.AddRange(data.Chairs);
+                    _inventory = data;
                 }
             }
             catch (Exception ex)
@@ -52,14 +55,14 @@ namespace FinalProject.GUI
                     return;
                 }
 
-                if (_availableChairs.Count == 0 || _availableTables.Count == 0)
+                if (_inventory.Chairs.Count == 0 || _inventory.Tables.Count == 0)
                 {
                     MessageBox.Show("Немає доступних стільців або столів.");
                     return;
                 }
 
                 FurnitureManager manager = new FurnitureManager();
-                FurnitureSet firstSet = manager.CreateSet(_availableChairs, _availableTables, material, width, depth, chairsCount);
+                FurnitureSet firstSet = manager.CreateSet(_inventory.Chairs, _inventory.Tables, material, width, depth, chairsCount);
 
                 var table = firstSet.GetAllFurniture().OfType<Table>().FirstOrDefault();
 
@@ -96,14 +99,14 @@ namespace FinalProject.GUI
         {
             try
             {
-                if (_availableChairs.Count == 0 || _availableTables.Count == 0)
+                if (_inventory.Chairs.Count == 0 || _inventory.Tables.Count == 0)
                 {
                     MessageBox.Show("Немає доступних стільців або столів.");
                     return;
                 }
 
                 FurnitureManager manager = new FurnitureManager();
-                List<FurnitureSet> remainingSets = manager.CreateRemainingSets(_availableChairs, _availableTables);
+                List<FurnitureSet> remainingSets = manager.CreateRemainingSets(_inventory.Chairs, _inventory.Tables);
 
 
                 string text = string.Empty;
@@ -141,12 +144,6 @@ namespace FinalProject.GUI
                 Logger.LogException(ex.Message);
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        public class InventoryData
-        {
-            public List<Table> Tables { get; set; } = new();
-            public List<Chair> Chairs { get; set; } = new();
         }
 
         #region labels

@@ -2,21 +2,5 @@
 <ArrayOfFurnitureSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FurnitureSet>
     <Name>дерево Set</Name>
-    <Items>
-      <Furniture xsi:type="Table">
-        <Material>дерево</Material>
-        <Price>1500.00</Price>
-        <Width>120</Width>
-        <Depth>80</Depth>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дерево</Material>
-        <Price>450.00</Price>
-      </Furniture>
-      <Furniture xsi:type="Chair">
-        <Material>дерево</Material>
-        <Price>500.00</Price>
-      </Furniture>
-    </Items>
   </FurnitureSet>
 </ArrayOfFurnitureSet>

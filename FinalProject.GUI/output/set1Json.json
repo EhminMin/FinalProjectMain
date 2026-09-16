@@ -1,25 +1,6 @@
 [
   {
     "Name": "дерево Set",
-    "Items": [
-      {
-        "$type": "table",
-        "Width": 120,
-        "Depth": 80,
-        "Material": "дерево",
-        "Price": 1500.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дерево",
-        "Price": 450.00
-      },
-      {
-        "$type": "chair",
-        "Material": "дерево",
-        "Price": 500.00
-      }
-    ],
     "ChairsCount": 2,
     "TotalPrice": 2450.00
   }

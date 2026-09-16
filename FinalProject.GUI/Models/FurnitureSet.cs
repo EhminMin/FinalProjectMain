@@ -3,36 +3,16 @@
     public class FurnitureSet
     {
         public string Name { get; set; }
-        public List<Furniture> Items { get; private set; } = new();
+        private List<Furniture> _furnitures = new();
 
-        public Furniture this[int index]
-        {
-            get
-            {
-                if (index < 0 || index >= Items.Count)
-                {
-                    throw new IndexOutOfRangeException("Index is out of range.");
-                }
-                return Items[index];
-            }
-            set
-            {
-                if (index < 0 || index >= Items.Count)
-                {
-                    throw new IndexOutOfRangeException("Index is out of range.");
-                }
-                Items[index] = value;
-            }
-        }
-
-        public int ChairsCount => Items.OfType<Chair>().Count();
+        public int ChairsCount => _furnitures.OfType<Chair>().Count();
 
         public decimal TotalPrice
         {
             get
             {
                 decimal total = 0;
-                foreach (Furniture item in Items)
+                foreach (Furniture item in _furnitures)
                 {
                     total += item.Price;
                 }
@@ -50,26 +30,26 @@
             {
                 throw new ArgumentNullException("Item cannot be null.");
             }
-            Items.Add(item);
+            _furnitures.Add(item);
         }
 
         public IReadOnlyList<Furniture> GetAllFurniture()
         {
-            return Items.AsReadOnly();
+            return _furnitures.AsReadOnly();
         }
 
         public void RemoveFurniture(Furniture item)
         {
-            Items.Remove(item);
+            _furnitures.Remove(item);
         }
 
         public void RemoveFurnitureAt(int index)
         {
-            if (index < 0 || index >= Items.Count)
+            if (index < 0 || index >= _furnitures.Count)
             {
                 throw new IndexOutOfRangeException("Index is out of range.");
             }
-            Items.RemoveAt(index);
+            _furnitures.RemoveAt(index);
         }
     }
 }
