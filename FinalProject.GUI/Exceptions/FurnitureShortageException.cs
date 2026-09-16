@@ -1,4 +1,4 @@
-﻿namespace FinalProject.Exceptions
+﻿namespace FinalProject.GUI.Exceptions
 {
     public class FurnitureShortageException : Exception
     {

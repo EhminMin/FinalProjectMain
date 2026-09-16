@@ -1,22 +1,29 @@
-﻿using FinalProject.Models;
+﻿using FinalProject.GUI.Models;
 using System.Text.Json;
+using FinalProject.GUI.Interfaces;
 
-namespace FinalProject.Services
+namespace FinalProject.GUI.Services
 {
-    public class JsonSerializerService
+    public class JsonSerializerService : ISaveLoad
     {
-        public FurnitureData? DeserializeFromFile(string path)
+        public List<FurnitureSet> Load(string path)
         {
             try
             {
+                if(!File.Exists(path))
+                {
+                    return new List<FurnitureSet>();
+                }
+
                 using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
                 {
                     string json = sr.ReadToEnd();
-                    FurnitureData? data = JsonSerializer.Deserialize<FurnitureData>(json);
+                    var data = JsonSerializer.Deserialize<List<FurnitureSet>>(json);
+
                     if (data == null)
                     {
                         Logger.LogException("Failed to read JSON data.");
-                        return null;
+                        return new List<FurnitureSet>();
                     }
                     return data;
                 }
@@ -24,11 +31,11 @@ namespace FinalProject.Services
             catch (Exception ex)
             {
                 Logger.LogException(ex.Message);
-                return null;
+                return new List<FurnitureSet>();
             }
         }
 
-        public void SerializeToFile<T>(string path, T data)
+        public void Save(string path, List<FurnitureSet> data)
         {
             try
             {
@@ -47,6 +54,5 @@ namespace FinalProject.Services
                 Logger.LogException(ex.Message);
             }
         }
-
     }
 }

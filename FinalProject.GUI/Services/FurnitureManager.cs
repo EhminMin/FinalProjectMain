@@ -1,16 +1,16 @@
-﻿using FinalProject.Models;
-using FinalProject.Exceptions;
+﻿using FinalProject.GUI.Models;
+using FinalProject.GUI.Exceptions;
 
-namespace FinalProject.Services
+namespace FinalProject.GUI.Services
 {
     public class FurnitureManager
     {
-        public FurnitureSet CreateSet(List<Chair> chairs, List<Table> tables, string material, string size, int chairsAmount)
+        public FurnitureSet CreateSet(List<Chair> chairs, List<Table> tables, string material, double width, double depth, int chairsAmount)
         {
-            Table? table = tables.FirstOrDefault(t => t.Material == material && t.Size == size);
+            Table? table = tables.FirstOrDefault(t => t.Material == material && t.Width == width && t.Depth == depth);
             if (table == null)
             {
-                throw new FurnitureShortageException($"No table found with material {material} and size {size}.");
+                throw new FurnitureShortageException($"No table found with material {material} and size {width}x{depth}.");
             }
 
             List<Chair> selectedChairs = chairs.Where(c => c.Material == material).Take(chairsAmount).ToList();
@@ -26,14 +26,15 @@ namespace FinalProject.Services
                 chairs.Remove(chair);
             }
 
-            return new FurnitureSet
+            FurnitureSet newSet  = new FurnitureSet{Name = $"{material} Set"};
+            newSet.AddFurniture(table);
+            foreach (var chair in selectedChairs)
             {
-                Name = $"{material} Set",
-                Table = table,
-                Chairs = selectedChairs
-            };
-        }
+                newSet.AddFurniture(chair);
+            }
 
+            return newSet;
+        }
 
         public List<FurnitureSet> CreateRemainingSets(List<Chair> chairs, List<Table> tables)
         {
@@ -54,17 +55,16 @@ namespace FinalProject.Services
                     continue;
                 }
 
-                FurnitureSet set = new FurnitureSet
+                FurnitureSet set = new FurnitureSet{Name = $"{material} Set"};
+                set.AddFurniture(table);
+                foreach (var chair in matchingChairs)
                 {
-                    Name = $"{material} Set",
-                    Table = table,
-                    Chairs = matchingChairs
-                };
+                    set.AddFurniture(chair);
+                }
 
                 sets.Add(set);
 
                 remainingTables.Remove(table);
-
                 remainingChairs.RemoveAll(c => c.Material == material);
             }
             return sets;

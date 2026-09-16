@@ -30,10 +30,12 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            txtDepth = new TextBox();
+            label6 = new Label();
             lblFileResult = new Label();
             rtbResult = new TextBox();
             btnCreateSet = new Button();
-            txtSize = new TextBox();
+            txtWidth = new TextBox();
             txtChairsCount = new TextBox();
             label5 = new Label();
             label4 = new Label();
@@ -65,10 +67,12 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(txtDepth);
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(lblFileResult);
             panel1.Controls.Add(rtbResult);
             panel1.Controls.Add(btnCreateSet);
-            panel1.Controls.Add(txtSize);
+            panel1.Controls.Add(txtWidth);
             panel1.Controls.Add(txtChairsCount);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
@@ -79,12 +83,34 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(381, 379);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // txtDepth
+            // 
+            txtDepth.BackColor = SystemColors.ButtonFace;
+            txtDepth.BorderStyle = BorderStyle.None;
+            txtDepth.Font = new Font("Bahnschrift", 12F);
+            txtDepth.Location = new Point(127, 131);
+            txtDepth.Multiline = true;
+            txtDepth.Name = "txtDepth";
+            txtDepth.Size = new Size(251, 23);
+            txtDepth.TabIndex = 11;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label6.Location = new Point(3, 131);
+            label6.Name = "label6";
+            label6.Size = new Size(119, 19);
+            label6.TabIndex = 10;
+            label6.Text = "Глибина стола:";
             // 
             // lblFileResult
             // 
             lblFileResult.AutoSize = true;
             lblFileResult.Font = new Font("Bahnschrift", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lblFileResult.Location = new Point(3, 325);
+            lblFileResult.Location = new Point(3, 351);
             lblFileResult.Name = "lblFileResult";
             lblFileResult.Size = new Size(0, 23);
             lblFileResult.TabIndex = 9;
@@ -94,7 +120,7 @@
             rtbResult.BackColor = SystemColors.ButtonFace;
             rtbResult.BorderStyle = BorderStyle.None;
             rtbResult.Font = new Font("Bahnschrift", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            rtbResult.Location = new Point(3, 182);
+            rtbResult.Location = new Point(3, 208);
             rtbResult.Multiline = true;
             rtbResult.Name = "rtbResult";
             rtbResult.ScrollBars = ScrollBars.Vertical;
@@ -108,7 +134,7 @@
             btnCreateSet.FlatStyle = FlatStyle.Flat;
             btnCreateSet.Font = new Font("Bahnschrift SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             btnCreateSet.ForeColor = Color.White;
-            btnCreateSet.Location = new Point(3, 131);
+            btnCreateSet.Location = new Point(3, 157);
             btnCreateSet.Name = "btnCreateSet";
             btnCreateSet.Size = new Size(375, 45);
             btnCreateSet.TabIndex = 7;
@@ -116,23 +142,24 @@
             btnCreateSet.UseVisualStyleBackColor = false;
             btnCreateSet.Click += btnCreateSet_Click;
             // 
-            // txtSize
+            // txtWidth
             // 
-            txtSize.BackColor = SystemColors.ButtonFace;
-            txtSize.BorderStyle = BorderStyle.None;
-            txtSize.Font = new Font("Bahnschrift", 12F);
-            txtSize.Location = new Point(116, 102);
-            txtSize.Multiline = true;
-            txtSize.Name = "txtSize";
-            txtSize.Size = new Size(262, 23);
-            txtSize.TabIndex = 6;
+            txtWidth.BackColor = SystemColors.ButtonFace;
+            txtWidth.BorderStyle = BorderStyle.None;
+            txtWidth.Font = new Font("Bahnschrift", 12F);
+            txtWidth.Location = new Point(127, 102);
+            txtWidth.Multiline = true;
+            txtWidth.Name = "txtWidth";
+            txtWidth.Size = new Size(251, 23);
+            txtWidth.TabIndex = 6;
+            txtWidth.TextChanged += txtSize_TextChanged;
             // 
             // txtChairsCount
             // 
             txtChairsCount.BackColor = SystemColors.ButtonFace;
             txtChairsCount.BorderStyle = BorderStyle.None;
             txtChairsCount.Font = new Font("Bahnschrift", 12F);
-            txtChairsCount.Location = new Point(151, 73);
+            txtChairsCount.Location = new Point(151, 71);
             txtChairsCount.Multiline = true;
             txtChairsCount.Name = "txtChairsCount";
             txtChairsCount.Size = new Size(227, 23);
@@ -155,9 +182,9 @@
             label4.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label4.Location = new Point(3, 102);
             label4.Name = "label4";
-            label4.Size = new Size(107, 19);
+            label4.Size = new Size(118, 19);
             label4.TabIndex = 3;
-            label4.Text = "Розмір стола:";
+            label4.Text = "Ширина стола:";
             label4.Click += label4_Click;
             // 
             // label3
@@ -208,7 +235,7 @@
             // 
             lblRemainingFileResult.AutoSize = true;
             lblRemainingFileResult.Font = new Font("Bahnschrift", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lblRemainingFileResult.Location = new Point(3, 325);
+            lblRemainingFileResult.Location = new Point(3, 351);
             lblRemainingFileResult.Name = "lblRemainingFileResult";
             lblRemainingFileResult.Size = new Size(0, 23);
             lblRemainingFileResult.TabIndex = 10;
@@ -222,7 +249,7 @@
             rtbRemainingSetsResult.Multiline = true;
             rtbRemainingSetsResult.Name = "rtbRemainingSetsResult";
             rtbRemainingSetsResult.ScrollBars = ScrollBars.Vertical;
-            rtbRemainingSetsResult.Size = new Size(375, 268);
+            rtbRemainingSetsResult.Size = new Size(375, 294);
             rtbRemainingSetsResult.TabIndex = 9;
             // 
             // btnCreateRemainingSet
@@ -271,11 +298,13 @@
         private Label label4;
         private TextBox txtChairsCount;
         private Label label5;
-        private TextBox txtSize;
+        private TextBox txtWidth;
         private Button btnCreateSet;
         private TextBox rtbResult;
         private Label lblFileResult;
         private Label lblRemainingFileResult;
         private TextBox rtbRemainingSetsResult;
+        private TextBox txtDepth;
+        private Label label6;
     }
 }

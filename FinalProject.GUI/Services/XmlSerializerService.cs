@@ -1,22 +1,29 @@
-﻿using FinalProject.Models;
+﻿using FinalProject.GUI.Models;
+using FinalProject.GUI.Interfaces;
 using System.Xml.Serialization;
 
-namespace FinalProject.Services
+namespace FinalProject.GUI.Services
 {
-    public class XmlSerializerService
+    public class XmlSerializerService : ISaveLoad
     {
-        public FurnitureData? DeserializeFromFile(string path)
+        public List<FurnitureSet> Load(string path)
         {
             try
             {
+                if(!File.Exists(path))
+                {
+                    return new List<FurnitureSet>();
+                }
+
                 using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(FurnitureData));
-                    FurnitureData? data = serializer.Deserialize(sr) as FurnitureData;
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<FurnitureSet>));
+                    var data = serializer.Deserialize(sr) as List<FurnitureSet>;
+
                     if (data == null)
                     {
                         Logger.LogException("Failed to read XML data.");
-                        return null;
+                        return new List<FurnitureSet>();
                     }
                     return data;
                 }
@@ -24,17 +31,17 @@ namespace FinalProject.Services
             catch (Exception ex)
             {
                 Logger.LogException(ex.Message);
-                return null;
+                return new List<FurnitureSet>();
             }
         }
 
-        public void SerializeToFile<T>(string path, T data)
+        public void Save(string path, List<FurnitureSet> data)
         {
             try
             {
                 using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(T));
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<FurnitureSet>));
                     serializer.Serialize(sw, data);
                 }
             }

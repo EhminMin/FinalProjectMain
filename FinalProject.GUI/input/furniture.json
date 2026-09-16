@@ -1,111 +1,113 @@
 {
   "Tables": [
     {
-      "Size": "120x80",
-      "Material": "Дерево",
+      "Width": 120,
+      "Depth": 80,
+      "Material": "дерево",
       "Price": 1500.00
     },
     {
-      "Size": "90x90",
-      "Material": "Скло",
+      "Width": 90,
+      "Depth": 90,
+      "Material": "скло",
       "Price": 2200.00
     },
     {
-      "Size": "150x100",
-      "Material": "Дерево",
+      "Width": 150,
+      "Depth": 100,
+      "Material": "дерево",
       "Price": 3000.00
     },
     {
-      "Size": "100x100",
-      "Material": "Метал",
+      "Width": 100,
+      "Depth": 100,
+      "Material": "метал",
       "Price": 1800.00
     },
     {
-      "Size": "120x60",
-      "Material": "ДСП",
+      "Width": 120,
+      "Depth": 60,
+      "Material": "дсп",
       "Price": 800.00
     },
     {
-      "Size": "80x80",
-      "Material": "Пластик",
+      "Width": 80,
+      "Depth": 80,
+      "Material": "пластик",
       "Price": 500.00
     },
     {
-      "Size": "200x100",
-      "Material": "Дерево",
+      "Width": 200,
+      "Depth": 100,
+      "Material": "дерево",
       "Price": 5000.00
     },
     {
-      "Size": "110x70",
-      "Material": "Скло",
+      "Width": 110,
+      "Depth": 70,
+      "Material": "скло",
       "Price": 2500.00
     },
     {
-      "Size": "140x80",
-      "Material": "Метал",
+      "Width": 140,
+      "Depth": 80,
+      "Material": "метал",
       "Price": 2100.00
     },
     {
-      "Size": "90x60",
-      "Material": "ДСП",
+      "Width": 90,
+      "Depth": 60,
+      "Material": "дсп",
       "Price": 750.00
     }
   ],
   "Chairs": [
     {
-      "Material": "Дерево",
+      "Material": "дерево",
       "Price": 450.00
     },
     {
-      "Material": "Дерево",
+      "Material": "дерево",
       "Price": 500.00
     },
     {
-      "Material": "Дерево",
+      "Material": "дерево",
       "Price": 400.00
     },
     {
-      "Material": "Дерево",
+      "Material": "дерево",
       "Price": 600.00
     },
     {
-      "Material": "Дерево",
+      "Material": "дерево",
       "Price": 600.00
     },
     {
-      "Material": "Дерево",
+      "Material": "дерево",
       "Price": 600.00
     },
     {
-      "Material": "Дерево",
-      "Price": 600.00
-    },
-    {
-      "Material": "Дерево",
-      "Price": 600.00
-    },
-    {
-      "Material": "Скло",
+      "Material": "скло",
       "Price": 800.00
     },
     {
-      "Material": "Метал",
+      "Material": "метал",
       "Price": 700.00
     },
     {
-      "Material": "Метал",
+      "Material": "метал",
       "Price": 750.00
     },
     {
-      "Material": "Пластик",
+      "Material": "пластик",
       "Price": 200.00
     },
     {
-      "Material": "Пластик",
+      "Material": "пластик",
       "Price": 250.00
     },
     {
-      "Material": "ДСП",
+      "Material": "дсп",
       "Price": 300.00
     }
   ]

@@ -43,12 +43,13 @@ namespace FinalProject
                     jsonService.SerializeToFile(Path.Combine("..", "..", "..", "output", "set2Json.json"),
                         remainingSets);
 
-               
-            }
-            catch (Exception ex)
-            {
-                Logger.LogException(ex.Message);
-                Console.WriteLine(ex.Message);
+
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogException(ex.Message);
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
     }

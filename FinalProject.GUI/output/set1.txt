@@ -1,6 +1,6 @@
-Set: Дерево Set
- Table size: 120x80
- Table material: Дерево
- Chairs count: 2
- Total price: 2450,00
+Set: дерево Set
+Table size: 120 x 80
+Table material: дерево
+Chairs count: 2
+Total price: 2450,00
 

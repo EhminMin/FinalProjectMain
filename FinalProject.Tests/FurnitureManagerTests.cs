@@ -1,8 +1,6 @@
-﻿using FinalProject.Models;
-using FinalProject.Services;
-using FinalProject.Exceptions;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+﻿using FinalProject.GUI.Models;
+using FinalProject.GUI.Services;
+using FinalProject.GUI.Exceptions;
 
 namespace FinalProject.Tests
 
@@ -10,116 +8,113 @@ namespace FinalProject.Tests
     [TestClass]
     public sealed class FurnitureManagerTests
     {
-        [TestMethod]
-        public void CreateSet_ValidData_ReturnsFurnitureSet()
+        private List<Chair> GetTestChairs()
         {
-            //Arrange
-            var chairs = new List<Chair>
+            return new List<Chair>
             {
-                new Chair("Дерево", 450),
-                new Chair("Дерево", 500)
+                new Chair("дерево", 450m),
+                new Chair("дерево", 500m),
+                new Chair("метал", 750m)
             };
+        }
 
-            var tables = new List<Table>
+        private List<Table> GetTestTables()
+        {
+            return new List<Table>
             {
-                new Table("120x80", "Дерево", 1500)
+                new Table("дерево", 1500m, 120, 80),
+                new Table("метал", 1800m, 100, 100)
             };
-
-            var manager = new FurnitureManager();
-
-            //Act
-            FurnitureSet result = manager.CreateSet(chairs, tables, "Дерево", "120x80", 2);
-
-            //Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Дерево Set", result.Name);
-            Assert.IsNotNull(result.Table);
-            Assert.AreEqual("120x80", result.Table.Size);
-            Assert.AreEqual("Дерево", result.Table.Material);
-            Assert.AreEqual(2, result.Chairs.Count);
-            Assert.AreEqual(2450, result.TotalPrice);
         }
 
         [TestMethod]
-        public void CreateSet_NoTable_ThrowExceptions()
+        public void CreateSet_ValidData_ReturnsCorrectName()
         {
-            //Arrange
-            var chairs = new List<Chair>
-            {
-                new Chair("Дерево", 450),
-                new Chair("Дерево", 500)
-            };
-
-            var tables = new List<Table>();
-
             var manager = new FurnitureManager();
+            var result = manager.CreateSet(GetTestChairs(), GetTestTables(), "дерево", 120, 80, 2);
 
-            //Act 
+            Assert.AreEqual("дерево Set", result.Name);
+        }
+
+        [TestMethod]
+        public void CreateSet_ValidData_SetsCorrectTableWidth()
+        {
+            var manager = new FurnitureManager();
+            var result = manager.CreateSet(GetTestChairs(), GetTestTables(), "дерево", 120, 80, 2);
+
+            var table = result.GetAllFurniture().OfType<Table>().FirstOrDefault();
+            Assert.AreEqual(120, table?.Width);
+        }
+
+        [TestMethod]
+        public void CreateSet_ValidData_SetsCorrectTableDepth()
+        {
+            var manager = new FurnitureManager();
+            var result = manager.CreateSet(GetTestChairs(), GetTestTables(), "дерево", 120, 80, 2);
+
+            var table = result.GetAllFurniture().OfType<Table>().FirstOrDefault();
+            Assert.AreEqual(80, table?.Depth);
+        }
+
+        [TestMethod]
+        public void CreateSet_ValidData_AddsCorrectAmountOfChairs()
+        {
+            var manager = new FurnitureManager();
+            var result = manager.CreateSet(GetTestChairs(), GetTestTables(), "дерево", 120, 80, 2);
+
+            int chairsCount = result.GetAllFurniture().OfType<Chair>().Count();
+            Assert.AreEqual(2, chairsCount);
+        }
+
+        [TestMethod]
+        public void CreateSet_ValidData_CalculatesCorrectTotalPrice()
+        {
+            var manager = new FurnitureManager();
+            var result = manager.CreateSet(GetTestChairs(), GetTestTables(), "дерево", 120, 80, 2);
+
+            Assert.AreEqual(2450m, result.TotalPrice);
+        }
+
+        [TestMethod]
+        public void CreateSet_NoTable_ThrowsException()
+        {
+            var manager = new FurnitureManager();
+            var emptyTables = new List<Table>();
+
             try
             {
-                manager.CreateSet(chairs, tables, "Дерево", "120x80", 2);
-                Assert.Fail("Expected FurnitureShortageException was not thrown.");
+                manager.CreateSet(GetTestChairs(), emptyTables, "дерево", 120, 80, 2);
+                Assert.Fail("Очікувався виняток FurnitureShortageException, але він не був викинутий.");
             }
             catch (FurnitureShortageException)
             {
-                // Expected exception
             }
-
         }
-        
+
         [TestMethod]
-        public void CreateSet_NotEnoughChairs_ThrowExceptions()
+        public void CreateSet_NotEnoughChairs_ThrowsException()
         {
-            //Arrange
-            var chairs = new List<Chair>
-            {
-                new Chair("Дерево", 450)
-            };
-
-            var tables = new List<Table>();
-
             var manager = new FurnitureManager();
+            var oneChair = new List<Chair> { new Chair("дерево", 450m) };
 
-            //Act 
             try
             {
-                manager.CreateSet(chairs, tables, "Дерево", "120x80", 2);
-                Assert.Fail("Expected FurnitureShortageException was not thrown.");
+                manager.CreateSet(oneChair, GetTestTables(), "дерево", 120, 80, 2);
+                Assert.Fail("Очікувався виняток FurnitureShortageException, але він не був викинутий.");
             }
             catch (FurnitureShortageException)
             {
-                // Expected exception
             }
         }
 
         [TestMethod]
-        public void CreateRemainingSet_ValidData_ReturnsSets()
+        public void CreateRemainingSet_ValidData_ReturnsCorrectSetsCount()
         {
-            //Arrange
-            var chairs = new List<Chair>
-            {
-                new Chair("Дерево", 450),
-                new Chair("Дерево", 500),
-                new Chair("Метал", 750)
-            };
-
-            var tables = new List<Table>
-            {
-                new Table("120x80", "Дерево", 1500),
-                new Table("100x100", "Метал", 1800)
-            };
-
             var manager = new FurnitureManager();
 
-            //Act
-            List<FurnitureSet> result = manager.CreateRemainingSets(chairs, tables);
+            List<FurnitureSet> result = manager.CreateRemainingSets(GetTestChairs(), GetTestTables());
 
-            //Assert
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result.Count > 0);
-
-
+            Assert.AreEqual(2, result.Count);
         }
-
     }
 }

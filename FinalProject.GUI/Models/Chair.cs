@@ -1,19 +1,13 @@
-﻿namespace FinalProject.Models
+﻿namespace FinalProject.GUI.Models
 {
-    public class Chair
+    public class Chair : Furniture
     {
-        public Chair(string material, decimal price)
+        public Chair(string material, decimal price) : base(material, price)
         {
-            Material = material;
-            Price = price;
         }
 
-        public string Material { get; set; }
-        public decimal Price { get; set; }
-
-        public Chair()
+        public Chair() : base()
         {
-
         }
     }
 }

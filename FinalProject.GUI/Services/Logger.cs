@@ -1,4 +1,4 @@
-﻿namespace FinalProject.Services
+﻿namespace FinalProject.GUI.Services
 {
     public static class Logger
     {
