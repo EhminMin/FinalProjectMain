@@ -1,5 +1,4 @@
 <Solution>
   <Project Path="FinalProject.GUI/FinalProject.GUI.csproj" Id="83e4ff5c-cfe8-4b06-903e-dd45f2d7295c" />
   <Project Path="FinalProject.Tests/FinalProject.Tests.csproj" Id="2dad42b4-b005-4a2f-b295-1ae05a5f50fd" />
-  <Project Path="FinalProject/FinalProject.csproj" />
 </Solution>

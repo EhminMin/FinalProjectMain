@@ -12,9 +12,9 @@ namespace FinalProject.Tests
         {
             return new List<Chair>
             {
-                new Chair("дерево", 450m),
-                new Chair("дерево", 500m),
-                new Chair("метал", 750m)
+                new Chair("дерево", 450),
+                new Chair("дерево", 500),
+                new Chair("метал", 750)
             };
         }
 
@@ -22,8 +22,8 @@ namespace FinalProject.Tests
         {
             return new List<Table>
             {
-                new Table("дерево", 1500m, 120, 80),
-                new Table("метал", 1800m, 100, 100)
+                new Table("дерево", 1500, 120, 80),
+                new Table("метал", 1800, 100, 100)
             };
         }
 
