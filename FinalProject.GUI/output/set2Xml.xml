@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfFurnitureSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FurnitureSet>
-    <Name>дерево Set</Name>
+    <Name>скло Set</Name>
   </FurnitureSet>
   <FurnitureSet>
-    <Name>скло Set</Name>
+    <Name>дерево Set</Name>
   </FurnitureSet>
   <FurnitureSet>
     <Name>метал Set</Name>

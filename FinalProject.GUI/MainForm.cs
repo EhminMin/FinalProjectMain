@@ -115,7 +115,7 @@ namespace FinalProject.GUI
                     var table = set.GetAllFurniture().OfType<Table>().FirstOrDefault();
 
                     text += $"Set: {set.Name}{Environment.NewLine}";
-                    if(table != null)
+                    if (table != null)
                     {
                         text += $"Table size: {table.Width} x {table.Depth}{Environment.NewLine}";
                         text += $"Table material: {table.Material}{Environment.NewLine}";
@@ -145,43 +145,5 @@ namespace FinalProject.GUI
                 MessageBox.Show(ex.Message);
             }
         }
-
-        #region labels
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void txtSize_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        #endregion
     }
 }

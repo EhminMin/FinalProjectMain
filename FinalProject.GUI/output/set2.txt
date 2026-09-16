@@ -1,14 +1,14 @@
-Set: дерево Set
-Table size: 120 x 80
-Table material: дерево
-Chairs count: 6
-Total price: 4650,00
-
 Set: скло Set
 Table size: 90 x 90
 Table material: скло
 Chairs count: 1
 Total price: 3000,00
+
+Set: дерево Set
+Table size: 150 x 100
+Table material: дерево
+Chairs count: 4
+Total price: 5200,00
 
 Set: метал Set
 Table size: 100 x 100

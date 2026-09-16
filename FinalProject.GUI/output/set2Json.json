@@ -1,13 +1,13 @@
 [
   {
-    "Name": "дерево Set",
-    "ChairsCount": 6,
-    "TotalPrice": 4650.00
-  },
-  {
     "Name": "скло Set",
     "ChairsCount": 1,
     "TotalPrice": 3000.00
+  },
+  {
+    "Name": "дерево Set",
+    "ChairsCount": 4,
+    "TotalPrice": 5200.00
   },
   {
     "Name": "метал Set",

@@ -39,7 +39,7 @@
             txtChairsCount = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
+            lblMaterial = new Label();
             txtMaterial = new TextBox();
             label2 = new Label();
             panel2 = new Panel();
@@ -76,14 +76,13 @@
             panel1.Controls.Add(txtChairsCount);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(lblMaterial);
             panel1.Controls.Add(txtMaterial);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(12, 59);
             panel1.Name = "panel1";
             panel1.Size = new Size(381, 379);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
             // 
             // txtDepth
             // 
@@ -152,7 +151,6 @@
             txtWidth.Name = "txtWidth";
             txtWidth.Size = new Size(251, 23);
             txtWidth.TabIndex = 6;
-            txtWidth.TextChanged += txtSize_TextChanged;
             // 
             // txtChairsCount
             // 
@@ -164,7 +162,6 @@
             txtChairsCount.Name = "txtChairsCount";
             txtChairsCount.Size = new Size(227, 23);
             txtChairsCount.TabIndex = 5;
-            txtChairsCount.TextChanged += textBox2_TextChanged;
             // 
             // label5
             // 
@@ -185,18 +182,16 @@
             label4.Size = new Size(118, 19);
             label4.TabIndex = 3;
             label4.Text = "Ширина стола:";
-            label4.Click += label4_Click;
             // 
-            // label3
+            // lblMaterial
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(3, 42);
-            label3.Name = "label3";
-            label3.Size = new Size(80, 19);
-            label3.TabIndex = 2;
-            label3.Text = "Матеріал:";
-            label3.Click += label3_Click_1;
+            lblMaterial.AutoSize = true;
+            lblMaterial.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lblMaterial.Location = new Point(3, 42);
+            lblMaterial.Name = "lblMaterial";
+            lblMaterial.Size = new Size(80, 19);
+            lblMaterial.TabIndex = 2;
+            lblMaterial.Text = "Матеріал:";
             // 
             // txtMaterial
             // 
@@ -218,7 +213,6 @@
             label2.Size = new Size(310, 23);
             label2.TabIndex = 0;
             label2.Text = "Введіть параметри набору меблів:";
-            label2.Click += label2_Click;
             // 
             // panel2
             // 
@@ -294,7 +288,7 @@
         private Panel panel2;
         private TextBox txtMaterial;
         private Button btnCreateRemainingSet;
-        private Label label3;
+        private Label lblMaterial;
         private Label label4;
         private TextBox txtChairsCount;
         private Label label5;

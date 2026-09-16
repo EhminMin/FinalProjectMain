@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="FinalProject.GUI.Models.Chair">
-    <Position X="0.5" Y="5.25" Width="1.5" />
+    <Position X="1.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Chair.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject.GUI.Models.Furniture">
-    <Position X="1.75" Y="2.25" Width="1.5" />
+    <Position X="2.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AkAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
       <FileName>Models\Furniture.cs</FileName>
@@ -17,12 +17,12 @@
   <Class Name="FinalProject.GUI.Models.FurnitureSet">
     <Position X="6.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQQAAAAAABAICAAACAAAAAQBAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQQAAAAAABAIAAAAAAABAAQBAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\FurnitureSet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject.GUI.Models.Table">
-    <Position X="3.25" Y="4.75" Width="1.5" />
+    <Position X="4.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAEAAABAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Models\Table.cs</FileName>
